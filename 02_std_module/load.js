@@ -3,6 +3,7 @@
  */
 // 0) モジュール読み込み
 // TODO: fsモジュール読み込む: CommonJS形式
+const fs = require('fs');
 
 // TODO: pathモジュールを読み込む: CommonJS形式
 
