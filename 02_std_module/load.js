@@ -6,6 +6,7 @@
 const fs = require('fs');
 
 // TODO: pathモジュールを読み込む: CommonJS形式
+const path = require('path');
 
 /**
  * ファイル読み込み処理
