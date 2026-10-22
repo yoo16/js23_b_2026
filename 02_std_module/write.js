@@ -5,11 +5,13 @@
 import fs from 'fs'
 
 // TODO: pathモジュールを読み込む: ESM形式
+import path from 'path'
 
 /**
  * ファイル書き出し
  */
 // TODO: __dirname を定義: EMS環境では必須
+const __dirname = path.resolve()
 
 // 現在のディレクトリパスから、data/student.json を指定
 const filePath = path.join(__dirname, "data", "student.json");
@@ -19,8 +21,8 @@ console.log("📖 ファイル読み込み書き込み中...");
 
 // student オブジェクト定義
 const student = {
-    no: "0000001",
-    name: "東京 太郎",
+    no: "01",
+    name: "HAL 太郎",
     createdAt: new Date().toISOString()
 };
 
