@@ -25,9 +25,9 @@ const server = http.createServer((req, res) => {
 })
    
 // TODO: サーバホスト: localhost
-const HOST = "";
+const HOST = "localhost";
 // TODO: サーバポート: 3000
-const PORT = 0;
+const PORT = 3000;
 
 // TODO: サーバ起動
 console.log(`🚀 Server running at http://${HOST}:${PORT}`);
