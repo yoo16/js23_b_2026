@@ -2,7 +2,7 @@
 import http from 'http'
 
 // TODO: HTTPサーバ作成: http.createServer()
-const server = http.createServer(() => {
+const server = http.createServer((req, res) => {
     // 処理を記述
 })
     // ---- ここから記述 ----
