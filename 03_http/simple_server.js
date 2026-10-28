@@ -3,8 +3,6 @@ import http from 'http'
 
 // TODO: HTTPサーバ作成: http.createServer()
 const server = http.createServer((req, res) => {
-    // 処理を記述
-})
     // ---- ここから記述 ----
     // TODO: ヘッダー
 
@@ -20,7 +18,8 @@ const server = http.createServer((req, res) => {
 
     // TODO: レスポンス終了
     // ---- ここまで記述 ----
-
+})
+   
 // TODO: サーバホスト: localhost
 const HOST = "";
 // TODO: サーバポート: 3000
