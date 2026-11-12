@@ -79,6 +79,11 @@ app.get('/info', (req, res) => {
 
 // TODO: GET /about
 // /public/about.html
+app.get('/about', (req, res) => {
+    console.log("ルーティング: /about");
+    // public/about.html の中身を返す
+    res.sendFile(__dirname + '/public/about.html');
+});
 
 // TODO: GET /search  => keyword クエリパラメータ対応
 // /public/home.html
