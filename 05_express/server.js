@@ -89,6 +89,10 @@ app.get('/about', (req, res) => {
 // /public/home.html
 app.get('/search', (req, res) => {
     console.log("ルーティング: /search");
+    if (req.query.keyword) {
+        const keyword = req.query.keyword;
+        console.log("検索キーワード: " + keyword);
+    }
     // public/home.html の中身を返す
     res.sendFile(__dirname + '/public/home.html');
 });
