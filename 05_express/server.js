@@ -34,10 +34,10 @@ app.use((req, res, next) => {
 });
 
 // TODO: JSONボディパーサー
-// app.use(express.json());
+app.use(express.json());
 
 // TODO: URLエンコード: www-form-urlencoded ボディパーサー
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true }));
 
 // TODO: 静的ファイルの公開: /public
 app.use(express.static(__dirname + '/public'));
