@@ -40,7 +40,7 @@ const app = express()
 // app.use(express.urlencoded({ extended: true }));
 
 // TODO: 静的ファイルの公開: /public
-// app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public'));
 
 // カート情報
 let cartItems = [];
