@@ -36,4 +36,4 @@ export function searchProducts(keyword) {
 }
 
 // エクスポート（一括エクスポートの場合）
-// export { fetchProducts, findProductById, searchProducts };
+export { fetchProducts, findProductById, searchProducts };
