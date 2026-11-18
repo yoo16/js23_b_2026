@@ -28,10 +28,10 @@ const app = express()
 // ミドルウェア設定
 // カスタムミドルウェア: すべてのリクエストでログ出力
 // TODO: app.use() で登録
-// app.use((req, res, next) => {
-//     console.log(`ミドルウェア: ${req.method} ${req.url}`);
-//     next();
-// });
+app.use((req, res, next) => {
+    console.log(`ミドルウェア: ${req.method} ${req.url}`);
+    next();
+});
 
 // TODO: JSONボディパーサー
 // app.use(express.json());
