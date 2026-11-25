@@ -12,10 +12,10 @@ fs.mkdirSync(path.dirname(dbFile), { recursive: true });
 
 // 接続 (ファイルがなければ自動作成)
 // TODO: ファイルパスを渡してDB接続: DatabaseSync
-export const db = {};
+export const db = new DatabaseSync(dbFile)
 
 // TODO: SQL 実行(外部キー制約を有効化): exec()
-// db.exec('PRAGMA foreign_keys = ON;');
+db.exec('PRAGMA foreign_keys = ON;');
 
 // 画面表示用: ? をパラメータで置換した SQL 文字列
 export const format = (sql, params = []) => {
