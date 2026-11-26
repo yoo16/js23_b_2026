@@ -2,16 +2,16 @@ import { db, format } from '../lib/db.js';
 
 export const fetchAll = (limit = 20) => {
     // feeds と users を結合し、新しい順に取得
-    // const sql = `SELECT 
-    //                 feeds.id, 
-    //                 feeds.user_id, 
-    //                 feeds.content, 
-    //                 feeds.created_at, 
-    //                 users.name AS user_name
-    //             FROM feeds
-    //             JOIN users ON feeds.user_id = users.id
-    //             ORDER BY feeds.created_at DESC, feeds.id DESC
-    //             LIMIT ?;`;
+    const sql = `SELECT 
+                    feeds.id, 
+                    feeds.user_id, 
+                    feeds.content, 
+                    feeds.created_at, 
+                    users.name AS user_name
+                FROM feeds
+                JOIN users ON feeds.user_id = users.id
+                ORDER BY feeds.created_at DESC, feeds.id DESC
+                LIMIT ?;`;
 
     // SQL を準備し、全件取得: statement.all(limit)
     const statement = db.prepare(sql);
